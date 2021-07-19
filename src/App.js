@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router ,Route} from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+import Navbar from "./components/navbar.component";
+import BookingList from "./components/booking-list.component";
+import EditBooking from "./components/edit-booking.component";
+import CreateDoctor from "./components/create-doctor.component";
+import CreateBooking from "./components/create-booking.component";
+import DoctorsList from "./components/doctor-list.component";
+import EditDoctor from "./components/edit-doctor.component";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Router>
+    <div className = "container">
+      <Navbar/>
+      <br/>
+      <Route path = "/" exact component ={BookingList} />
+      <Route path = "/edit/:id" component ={EditBooking}/>
+      <Route path = "/doctor"  component ={CreateDoctor} />
+      <Route path = "/booking"  component ={CreateBooking} />
+      <Route path = "/edit"  component={DoctorsList} />
+      <Route path = "/update/:id" component={EditDoctor} />
     </div>
+    </Router>
   );
 }
 

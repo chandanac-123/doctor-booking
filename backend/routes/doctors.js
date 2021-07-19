@@ -38,7 +38,7 @@ router.route('/:id').delete((req,res) => {
 });
 
 router.route('/:id').post((req,res) => {
-    Doctor.findByIdAndUpdate(req.params.id)
+    Doctor.findById(req.params.id)
     .then(doctor => {
        doctor.doctorId = Number(req.body.doctorId);
         doctor.doctorName = req.body.doctorName;
