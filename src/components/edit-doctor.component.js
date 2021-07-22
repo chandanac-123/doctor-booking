@@ -89,7 +89,7 @@ export default class EditDoctor extends Component{
                 <h3>Edit Doctor</h3>
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group">
-                        <label>Doctor-Id:</label>
+                        <label>Id:</label>
                         {/* <select ref="userInput"
                             required
                             className="form-control"
@@ -112,7 +112,7 @@ export default class EditDoctor extends Component{
                     />
                  </div> 
             <div className="form-group">
-                <label>Doctor-name</label> 
+                <label>Name</label> 
                 <input type="text"
                     required
                     className="form-control"
