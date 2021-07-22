@@ -63,7 +63,7 @@ export default class CreateDoctor extends Component{
                 <h3>Add</h3>
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group">
-                        <label>Doctor-Id:</label>
+                        <label>Id:</label>
                         <input type="Number"
                             required
                             className="form-control"
@@ -73,7 +73,7 @@ export default class CreateDoctor extends Component{
                     </div>
 
                     <div className="form-group">
-                        <label>Doctor Name:</label> 
+                        <label>Name:</label> 
                         <input type="Text"
                         required
                         className="form-control"

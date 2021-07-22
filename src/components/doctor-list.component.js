@@ -54,9 +54,9 @@ export default class DoctorsList extends Component{
                     <table className="table">
                     <thead className="thead-light">
                         <tr>
-                            <th>Doctor-Id</th>
+                            <th>Id</th>
 
-                            <th>Doctor-Name</th>
+                            <th>Name</th>
 
                             <th>Department</th>
                           

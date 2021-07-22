@@ -58,8 +58,8 @@ export default class BookingList extends Component{
                     <thead className="thead-light">
                         <tr>
                             
-                            <th>Doctor_ID</th>
-                            <th>Booking_ID</th>
+                            <th>Doctor_Id</th>
+                            <th>Booking_Id</th>
 
                             <th>Name</th>
 
