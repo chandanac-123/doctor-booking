@@ -82,7 +82,7 @@ export default class CreateBooking extends Component{
     onSubmit(e){
         e.preventDefault();
 
-        const book = {
+        const booking = {
             
             doctorId:this.state.doctorId,
             bookingId:this.state.bookingId,
@@ -92,12 +92,12 @@ export default class CreateBooking extends Component{
             phone:this.state.phone
         }
 
-        console.log(book);
+        console.log(booking);
 
-        axios.post('http://localhost:9000/booking                                                                               ' , book)
-        .then(res => console.log(res.data));
+        axios.post('http://localhost:9000/booking/' , booking)
+            .then(res => console.log(res.data));
 
-        window.location ='/';
+               window.location ='/';
     }
 
     render(){
@@ -106,7 +106,7 @@ export default class CreateBooking extends Component{
                  <h3>Create New Booking </h3>
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group">
-                        <label>Doctor-Id:</label>
+                        <label>Doctor_Id:</label>
                         <select ref="doctorInput"
                             required
                             className="form-control"
@@ -124,7 +124,7 @@ export default class CreateBooking extends Component{
                     </div>
 
                     <div className="form-group">
-                        <label>Booking-Id:</label> 
+                        <label>Booking_Id:</label> 
                         <input type="Number"
                         required
                         className="form-control"
