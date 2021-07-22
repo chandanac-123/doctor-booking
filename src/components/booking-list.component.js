@@ -11,7 +11,7 @@ const Booking=props=>(
         <td>{props.booking.date.substring(0,10)}</td>
         <td>{props.booking.phone}</td>
         <td>
-            <Link to={"/edit/"+props.booking._id}>edit</Link> | <a href="#" onClick={()=>{props.deleteBooking(props.booking._id)}}>delete</a>
+            <Link to={"/book/"+props.booking._id}>edit</Link> | <a href="#" onClick={()=>{props.deleteBooking(props.booking._id)}}>delete</a>
         </td>
     </tr>
 )
